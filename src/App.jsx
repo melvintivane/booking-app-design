@@ -10,12 +10,14 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Hotel from "./pages/Hotel/Hotel";
 import List from "./pages/List/List";
+import Header from "./components/Header/Header";
 
 
 const Layout = () => {
   return (
     <div className="app">
       <Navbar />
+      <Header/>
       <Outlet />
       <Footer />
     </div>
@@ -32,11 +34,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/hotel",
+        path: "/hotels",
         element: <List />,
       },
       {
-        path: "/hotel/:id",
+        path: "/hotels/:id",
         element: <Hotel />,
       },
     ],
