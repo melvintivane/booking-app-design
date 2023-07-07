@@ -1,0 +1,29 @@
+.featuredContainer {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.featuredItem {
+    position: relative;
+    height: 300px; /* Defina a altura desejada para as imagens */
+    width: 300px; /* Defina a laltura desejada para as imagens */
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.featuredImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.featuredTitles {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
