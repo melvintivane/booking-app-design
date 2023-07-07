@@ -16,8 +16,6 @@ import Header from "./components/Header/Header";
 const Layout = () => {
   return (
     <div className="app">
-      <Navbar />
-      <Header/>
       <Outlet />
       <Footer />
     </div>
