@@ -7,8 +7,9 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { format } from 'date-fns';
 
-const Header = () => {
+const Header = ({type}) => {
 	const [openDate, setOpenDate] = useState(false);
+	const [openOptions, setOpenOptions] = useState(false);
 	const [date, setDate] = useState([
 		{
 			startDate: new Date(),
@@ -16,16 +17,33 @@ const Header = () => {
 			key: 'selection'
 		}
 	]);
-	const [openOptions, setOpenOptions] = useState(false);
 	const [options, setOptions] = useState({
 		adult: 1,
 		children: 0,
 		room: 1
 	});
 
+	const handleOption = (name, operation) => {
+		setOptions((prev) => {
+			return {
+				...prev,
+				[name]: operation === "increase" ? options[name] + 1 : options[name] - 1,
+			};
+		});
+	};
+	const handleOpenDate = () => {
+		setOpenDate(!openDate);
+		setOpenOptions(false);
+	}
+	const handleOpenOptions = () => {
+		setOpenOptions(!openOptions);
+		setOpenDate(false);
+	}
+
+
 	return (
 		<div className='header'>
-			<div className="headerContainer">
+			<div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
 				<div className="headerList">
 					<div className="headerListItem active">
 						<FontAwesomeIcon icon={faBed} />
@@ -48,7 +66,7 @@ const Header = () => {
 						<span>Airport taxis</span>
 					</div>
 					</div>
-					<h1 className="headerTitle">
+					{ type !== "list" && <><h1 className="headerTitle">
 					A lifetime of discounts? It's Genius.
 					</h1>
 					<p className="headerDesc">
@@ -63,7 +81,7 @@ const Header = () => {
 						</div>						
 						<div className="headerSearchItem">
 							<FontAwesomeIcon icon={faCalendarDays} className='headerIcon' />
-							<span onClick={()=> setOpenDate(!openDate)} className='headerSearchText'>{`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
+							<span onClick={handleOpenDate} className='headerSearchText'>{`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
 							{openDate && <DateRange
 								editableDateInputs={true}
 								onChange={item => setDate([item.selection])}
@@ -74,43 +92,42 @@ const Header = () => {
 						</div>
 						<div className="headerSearchItem">
 							<FontAwesomeIcon icon={faPerson} className='headerIcon' />
-							<span className="headerSearchText">{`${options.adult} adult • ${options.children} children • ${options.room} room`}</span>
-							<div className="options">
+							<span onClick={handleOpenOptions} className="headerSearchText">{`${options.adult} adult • ${options.children} children • ${options.room} room`}</span>
+							{openOptions && 
+							<div className="options" >
 								<div className="optionItem">
 									<span className="optionText">Adult</span>
 									<div className='counter'>
-										<button className="optionCounterButton">-</button>
-										<span className="optionCounterNumber">1</span>
-										<button className="optionCounterButton">+</button>
+										<button disabled={options.adult <= 1} className="optionCounterButton" onClick={() => handleOption("adult", "decrease")}>-</button>
+										<span className="optionCounterNumber">{options.adult}</span>
+										<button className="optionCounterButton" onClick={() => handleOption("adult", "increase")}>+</button>
 									</div>
 								</div>
 								<div className="optionItem">
 									<span className="optionText">Children</span>
 									<div className='counter'>	
-										<button className="optionCounterButton">-</button>
-										<span className="optionCounterNumber">0</span>
-										<button className="optionCounterButton">+</button>
+										<button disabled={options.children <= 0} className="optionCounterButton" onClick={() => handleOption("children", "decrease")}>-</button>
+										<span className="optionCounterNumber">{options.children}</span>
+										<button className="optionCounterButton" onClick={() => handleOption("children", "increase")}>+</button>
 									</div>
 								</div>
 								<div className="optionItem">
 									<span className="optionText">Room</span>
 									<div className='counter'>
-										<button className="optionCounterButton">-</button>
-										<span className="optionCounterNumber">1</span>
-										<button className="optionCounterButton">+</button>
+										<button disabled={options.room <= 1} className="optionCounterButton" onClick={() => handleOption("room", "decrease")}>-</button>
+										<span className="optionCounterNumber">{options.room}</span>
+										<button className="optionCounterButton" onClick={() => handleOption("room", "increase")}>+</button>
 									</div>
 								</div>
 								<div className="optionItem">
 									<button className='doneBtn'>Done</button>
 								</div>
-							</div>
+							</div>}
 						</div>
 						<div className="headerSearchItem">
-						<button className="headerBtn" >
-						Search
-						</button>
+						<button className="headerBtn" >Search</button>
 					</div>
-				</div>
+				</div></>}
 			</div>
 		</div>
 	)
