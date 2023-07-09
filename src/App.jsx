@@ -17,7 +17,7 @@ const Layout = () => {
   return (
     <div className="app">
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
