@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-mixed-spaces-and-tabs */
+import { useState } from 'react';
 import "./List.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
