@@ -6,12 +6,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
     padding: 50px;
 }
-  
-.mailInputContainer > input{
-    width: 300px;
+
+.mailTitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.mailDesc {
+    font-size: 14px;
+    font-weight: 300;
+    color: #d2d2d2;
+    margin-bottom: 20px;
+}
+
+.mailInputContainer > input {
+    width: 400px;
     height: 45px;
     padding: 10px;
     border: none;
