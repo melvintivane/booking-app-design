@@ -11,6 +11,7 @@ import Home from "./pages/Home/Home";
 import Hotel from "./pages/Hotel/Hotel";
 import List from "./pages/List/List";
 import Header from "./components/Header/Header";
+import Attractions from "./pages/Atractrions/Attractions";
 
 
 const Layout = () => {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/hotels/:id",
         element: <Hotel />,
+      },
+      {
+        path: "/attractions",
+        element: <Attractions />,
       },
     ],
   },
