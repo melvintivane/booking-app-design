@@ -1,6 +1,6 @@
 .propertyList {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1024px;
     display: flex;
     justify-content: space-between;
     gap: 20px;

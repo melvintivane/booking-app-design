@@ -8,7 +8,7 @@
 
 .headerContainer {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1024px;
     margin: 20px 0px 100px 0px;
 }
 
@@ -28,6 +28,10 @@
     gap: 10px;
     cursor: pointer;
     padding: 10px;
+    font-size: 12px;
+}
+.icon {
+    margin-right: 10px;
 }
 .headerListItem:hover {
     background-color: #0071c291;
@@ -42,7 +46,7 @@
 }
 
 .headerDesc {
-    margin: 20px 0px;
+    margin: 0px 0px;
 }
 
 .headerBtn {
@@ -51,7 +55,7 @@
     font-weight: 500;
     border: none;
     border-radius: 4px;
-    padding: 10px;
+    padding: 10px 40px;
     cursor: pointer;
 }
 
@@ -62,12 +66,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px 0px;
+    padding: 8px 0px;
     border-radius: 5px;
     position: absolute;
-    bottom: -25px;
+    bottom: -35px;
     width: 100%;
-    max-width: 1080px;
+    max-width: 1024px;
 }
 
 .headerIcon {
