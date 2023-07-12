@@ -12,7 +12,7 @@ const Home = () => {
 	return (
 		<div>
 			<Navbar/>
-			<Header/>
+			<Header type='home'/>
 			<div className="homeContainer">
 				<Featured />
 				<h1 className="homeTitle">Browse by property type</h1>
