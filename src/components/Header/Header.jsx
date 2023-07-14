@@ -54,7 +54,7 @@ const Header = ({type}) => {
 			<div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
 				<div className="headerList">
 					<div className="headerListItem active">
-						<Link className='link'>
+						<Link className='link' to="/">
 							<FontAwesomeIcon className='icon' icon={faBed} />
 							<span>Stays</span>
 						</Link>
