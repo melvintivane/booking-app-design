@@ -46,14 +46,14 @@
     bottom: 15px;
     color: whitesmoke;
     font-size: 14px;
-    z-index: 3;
+    z-index: 2;
 }
   
-  .attractionsItem:hover .attractionsItemImg {
+.attractionsItem:hover .attractionsItemImg {
     transform: scale(1.1);
-  }
+}
 
-  .attractionsItem::before {
+.attractionsItem::before {
     content: "";
     position: absolute;
     top: 0;
@@ -63,9 +63,82 @@
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0.7;
     z-index: 2;
-  }
+}
   
+.attractionsSignIn {
+    width: 1024px;
+    border: 1px solid lightgray;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 8px;
+}
 
+.attractionsSignInTitle {
+    font-size: 14px;
+    color: #232323;
+}
 
+.attractionsSignInText {
+    margin: 8px 0px;
+    font-size: 13px;
+}
 
+.attractionsSignIn span {
+    color: #1274e3;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: -10px;
+}
 
+.attractionsSignIn span:hover {
+    background-color: #3594d820;
+}
+
+hr {
+    width: 1080px;
+    background-color: #e8e8e8; 
+    height: 1px;
+    border: none;
+    margin-top: 20px;
+}
+
+.attractionsTrustContainer {
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.attractionsTrustTitle {
+    font-size: 18px;
+    color: #232323;
+}
+
+.attractionsTrustWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.attractiosTrustItem {
+    display: flex;
+    width: 300px;
+}
+
+.attractionsTrustIcon {
+    height: 20px;
+    color: #008234;
+    margin-right: 20px;
+}
+
+.attractionsTrustItemTitle {
+    font-size: 14px;
+    color: #232323;
+    margin-bottom: 5px;
+}
+
+.attractiosTrustItem p {
+    font-size: 12px;
+}
