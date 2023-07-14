@@ -3,6 +3,8 @@ import "./Attractions.css";
 import Navbar from '../../components/Navbar/Navbar';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarCheck, faHeadset, faMagnet } from '@fortawesome/free-solid-svg-icons';
 
 const Attractions = () => {
   return (
@@ -57,7 +59,40 @@ const Attractions = () => {
             </div>
           </div>
         </div>
-      <Footer />
+        <div className="attractionsSignIn">
+          <h1 className="attractionsSignInTitle">Sign in to save time</h1>
+          <p className='attractionsSignInText'>Your Melvinbooking.com account lets you book using your saved details</p>
+          <span>Sign in</span>
+        </div>
+        <hr />
+        <div className="attractionsTrustContainer">
+          <h1 className="attractionsTrustTitle">We've got you covered</h1>
+          <div className="attractionsTrustWrapper">
+            <div className="attractiosTrustItem">
+              <FontAwesomeIcon className='attractionsTrustIcon' icon={faMagnet}/>
+              <div>
+                <h1 className="attractionsTrustItemTitle">Explore top attractions</h1>
+                <p>Experience the best of your destination, with attractions, tours, activities and more</p>
+              </div>
+            </div>
+            <div className="attractiosTrustItem">
+              <FontAwesomeIcon className='attractionsTrustIcon' icon={faCalendarCheck}/>
+              <div>
+                <h1 className="attractionsTrustItemTitle">Fast and flexible</h1>
+                <p>Book tickets online in minutes, with free cancellation on many attractions</p>
+              </div>
+            </div>
+            <div className="attractiosTrustItem">
+              <FontAwesomeIcon className='attractionsTrustIcon' icon={faHeadset}/>
+              <div>
+                <h1 className="attractionsTrustItemTitle">Support when you need it</h1>
+                <p>Melvinbooking.com's global Customer Service team is here to help 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <Footer />
       </div>
     </div>
   )
