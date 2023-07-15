@@ -104,19 +104,19 @@ hr {
     margin-top: 20px;
 }
 
-.attractionsTrustContainer {
+.trustContainer {
     width: 1024px;
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
 }
 
-.attractionsTrustTitle {
+.trustTitle {
     font-size: 18px;
     color: #232323;
 }
 
-.attractionsTrustWrapper {
+.trustWrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -127,13 +127,13 @@ hr {
     width: 300px;
 }
 
-.attractionsTrustIcon {
+.trustIcon {
     height: 20px;
     color: #008234;
     margin-right: 20px;
 }
 
-.attractionsTrustItemTitle {
+.trustItemTitle {
     font-size: 14px;
     color: #232323;
     margin-bottom: 5px;
@@ -141,4 +141,50 @@ hr {
 
 .attractiosTrustItem p {
     font-size: 12px;
+}
+
+.destinationsWrapper {
+    width: 1024px;
+}
+
+.destinationsTitle {
+    font-size: 18px;
+    color: #232323; 
+}
+
+.p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.destinationsCountry {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 27px;
+}
+
+.destinationsParagraph {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.destinationsParagraph:hover {
+    background-color: #97bad420;
+}
+
+.destinationsWrapper hr {
+    width: 1024px;
+    margin-top: -1px;
+}
+
+.active {
+    color: #1274e3;
+    border-bottom: 2px solid #1274e3;
+}
+
+.active:hover {
+    background-color: transparent;
 }
