@@ -65,33 +65,49 @@ const Attractions = () => {
           <span>Sign in</span>
         </div>
         <hr />
-        <div className="attractionsTrustContainer">
-          <h1 className="attractionsTrustTitle">We've got you covered</h1>
-          <div className="attractionsTrustWrapper">
+        <div className="trustContainer">
+          <h1 className="trustTitle">We've got you covered</h1>
+          <div className="trustWrapper">
             <div className="attractiosTrustItem">
-              <FontAwesomeIcon className='attractionsTrustIcon' icon={faMagnet}/>
+              <FontAwesomeIcon className='trustIcon' icon={faMagnet}/>
               <div>
-                <h1 className="attractionsTrustItemTitle">Explore top attractions</h1>
+                <h1 className="trustItemTitle">Explore top attractions</h1>
                 <p>Experience the best of your destination, with attractions, tours, activities and more</p>
               </div>
             </div>
             <div className="attractiosTrustItem">
-              <FontAwesomeIcon className='attractionsTrustIcon' icon={faCalendarCheck}/>
+              <FontAwesomeIcon className='trustIcon' icon={faCalendarCheck}/>
               <div>
-                <h1 className="attractionsTrustItemTitle">Fast and flexible</h1>
+                <h1 className="trustItemTitle">Fast and flexible</h1>
                 <p>Book tickets online in minutes, with free cancellation on many attractions</p>
               </div>
             </div>
             <div className="attractiosTrustItem">
-              <FontAwesomeIcon className='attractionsTrustIcon' icon={faHeadset}/>
+              <FontAwesomeIcon className='trustIcon' icon={faHeadset}/>
               <div>
-                <h1 className="attractionsTrustItemTitle">Support when you need it</h1>
+                <h1 className="trustItemTitle">Support when you need it</h1>
                 <p>Melvinbooking.com's global Customer Service team is here to help 24/7</p>
               </div>
             </div>
           </div>
         </div>
         <hr />
+        <div className="destinationsWrapper">
+          <h1 className="destinationsTitle">Explore more destinations</h1>
+          <p className='p'>Find things to do in cities around the world</p>
+          <div className="destinationsCountry">
+            <p className='destinationsParagraph active'>Europe</p>
+            <p className='destinationsParagraph'>North America</p>
+            <p className='destinationsParagraph'>Asia</p>
+            <p className='destinationsParagraph'>Africa</p>
+            <p className='destinationsParagraph'>Oceania</p>
+            <p className='destinationsParagraph'>Middle East</p>
+            <p className='destinationsParagraph'>South America</p>
+            <p className='destinationsParagraph'>Caribbean</p>
+            <p className='destinationsParagraph'>Central America</p>
+          </div>
+          <hr />
+        </div>
         <Footer />
       </div>
     </div>
