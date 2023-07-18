@@ -11,7 +11,7 @@ import Home from "./pages/Home/Home";
 import Hotel from "./pages/Hotel/Hotel";
 import List from "./pages/List/List";
 import Header from "./components/Header/Header";
-import Attractions from "./pages/Atractrions/Attractions";
+import Attractions from "./pages/Attractions/Attractions";
 
 
 const Layout = () => {
