@@ -1,11 +1,16 @@
 .footer {
-    width: 1024px;
-    margin: 50px 0px;
+    width: 100%;
+    padding:50px 0px;
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(219, 219, 219, 0.363);
 }
 
 .footerLists {
-    width: 100%;
+    width: 1024px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
@@ -18,7 +23,7 @@
 
 .footerListItem {
     margin-bottom: 10px;
-    color: #003b95;
+    color: rgb(22, 22, 22);
     cursor: pointer;
 }
 
