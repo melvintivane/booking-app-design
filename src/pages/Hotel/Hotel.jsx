@@ -42,7 +42,7 @@ const Hotel = () => {
 	const handleMove = (direction) => {
 		let newSlideNumber;
 	
-		if (direction === "l") {
+		if (direction === "left") {
 		  newSlideNumber = slideNumber === 0 ? 5 : slideNumber - 1;
 		} else {
 		  newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
@@ -67,7 +67,7 @@ const Hotel = () => {
 						<FontAwesomeIcon
 							icon={faCircleArrowLeft}
 							className="arrow"
-							onClick={() => handleMove("l")}
+							onClick={() => handleMove("left")}
 						/>
 						<div className="sliderWrapper">
 							<img src={photos[slideNumber].src} alt="" className="sliderImg" />
@@ -75,7 +75,7 @@ const Hotel = () => {
 						<FontAwesomeIcon
 							icon={faCircleArrowRight}
 							className="arrow"
-							onClick={() => handleMove("r")}
+							onClick={() => handleMove("right")}
 						/>
 					</div>
 				)}
