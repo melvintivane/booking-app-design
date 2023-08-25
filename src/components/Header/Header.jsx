@@ -137,9 +137,9 @@ const Header = ({type}) => {
 										<button className="optionCounterButton" onClick={() => handleOption("room", "increase")}>+</button>
 									</div>
 								</div>
-								<div className="optionItem">
+								{/* <div className="optionItem">
 									<button className='doneBtn'>Done</button>
-								</div>
+								</div> */}
 							</div>}
 						</div>
 						<div className="headerSearchItem">
